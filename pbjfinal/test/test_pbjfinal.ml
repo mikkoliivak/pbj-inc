@@ -9,7 +9,7 @@ let test_file_not_found _ =
 
 let test_player_not_found _ =
   assert_raises
-    (PlayerNotFound "Player 'Nonexistent Player' not found in the CSV file.")
+    (PlayerNotFound "Player 'Nonexistent Player' not found in the database.")
     (fun () -> get_player_attributes csv_file "Nonexistent Player")
 
 let test_valid_player _ =

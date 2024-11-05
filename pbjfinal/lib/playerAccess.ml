@@ -4,7 +4,7 @@ exception PlayerNotFound of string
 
 let find_index header headers =
   let rec aux i = function
-    | [] -> failwith ("Header '" ^ header ^ "' not found in the CSV file.")
+    | [] -> failwith ("Header '" ^ header ^ "' not found in the database.")
     | h :: t -> if h = header then i else aux (i + 1) t
   in
   aux 0 headers
